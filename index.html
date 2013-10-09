@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="maporamaClientsApp">
 	<head>
 	    <meta charset="utf-8">
 	    <title>Maporama Clients Heatmap</title>
@@ -8,21 +8,25 @@
 	    
 	     <script src="libs/maporama.1.8.15.js"></script>
 	     <script src="libs/maporama.jquery.js"></script>
-	     <script src="libs/angular.min.js"></script>
+	     <script src="libs/angular/angular.min.js"></script>
+	     <script src="libs/angular/angular-resource.js"></script>
 	     
 	     <script src="src/models/Clients.js"></script>
-	     <script src="src/models/MaporamaClients.js"></script>
+		  <script src="src/app.js"></script>
+		  <script src="src/controllers.js"></script>
+		  <script src="src/services.js"></script>
     </head>
     
-    <script>
+    <!-- <script>
 	
 		google.maps.event.addDomListener(window, 'load', MaporamaClients.init);
 
-    </script>
+    </script> -->
     
-    <body>
+    <body ng-controller="ClientsCtrl">
    
-    <div id="map-canvas"></div>
+   	<div id="status-menu"></div>	
+  	<div id="map-canvas"></div>
   </body>
     
 </html>
